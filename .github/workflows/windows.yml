@@ -1,0 +1,17 @@
+
+name: Testar Windows
+
+on:
+  workflow_dispatch:
+
+jobs:
+  windows:
+    runs-on: windows-latest
+
+    steps:
+      - name: Verificar Windows
+        shell: powershell
+        run: |
+          systeminfo
+          whoami
+          Write-Output "Windows funcionando!"
